@@ -1,6 +1,6 @@
 import Candidate from './../models/candidateModel.js';
 
-// Get all candidates
+
 export const getAllCandidates = async (req, res) => {
   try {
     const candidates = await Candidate.find();
@@ -10,7 +10,6 @@ export const getAllCandidates = async (req, res) => {
   }
 };
 
-// Create a new candidate
 export const createCandidate = async (req, res) => {
   const candidate = new Candidate(req.body);
   try {
@@ -21,7 +20,6 @@ export const createCandidate = async (req, res) => {
   }
 };
 
-// Get a candidate by ID
 export const getCandidateById = async (req, res) => {
   try {
     const candidate = await Candidate.findById(req.params.id);
@@ -34,7 +32,7 @@ export const getCandidateById = async (req, res) => {
   }
 };
 
-// Update a candidate by ID
+
 export const updateCandidateById = async (req, res) => {
   try {
     const updatedCandidate = await Candidate.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -44,7 +42,7 @@ export const updateCandidateById = async (req, res) => {
   }
 };
 
-// Delete a candidate by ID
+
 export const deleteCandidateById = async (req, res) => {
   try {
     await Candidate.findByIdAndDelete(req.params.id);

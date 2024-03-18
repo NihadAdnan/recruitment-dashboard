@@ -1,7 +1,7 @@
 import Candidate from './../models/candidateModel.js';
 import Job from '../models/jobModel.js';
 
-// Calculate total number of candidates
+
 export const getTotalCandidates = async (req, res) => {
   try {
     const totalCandidates = await Candidate.countDocuments();
@@ -11,7 +11,7 @@ export const getTotalCandidates = async (req, res) => {
   }
 };
 
-// Calculate total number of shortlisted candidates
+
 export const getShortlistedCandidates = async (req, res) => {
   try {
     const shortlistedCandidates = await Candidate.countDocuments({ status: 'shortlisted' });
@@ -21,7 +21,7 @@ export const getShortlistedCandidates = async (req, res) => {
   }
 };
 
-// Calculate total number of rejected candidates
+
 export const getRejectedCandidates = async (req, res) => {
   try {
     const rejectedCandidates = await Candidate.countDocuments({ status: 'rejected' });
@@ -31,7 +31,6 @@ export const getRejectedCandidates = async (req, res) => {
   }
 };
 
-// Group candidates by gender
 export const getCandidatesByGender = async (req, res) => {
   try {
     const candidatesByGender = await Candidate.aggregate([
@@ -43,7 +42,7 @@ export const getCandidatesByGender = async (req, res) => {
   }
 };
 
-// Fetch recently added jobs
+
 export const getRecentlyAddedJobs = async (req, res) => {
   try {
     const recentlyAddedJobs = await Job.find().sort({ date_posted: -1 }).limit(5);

@@ -1,6 +1,8 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const candidateSchema = new mongoose.Schema({
+const { Schema, model } = mongoose;
+
+const candidateSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -23,7 +25,7 @@ const candidateSchema = new mongoose.Schema({
     required: true
   },
   job_id: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'Job',
     required: true
   },
@@ -33,6 +35,6 @@ const candidateSchema = new mongoose.Schema({
   }
 });
 
-const Candidate = mongoose.model('Candidate', candidateSchema);
+const Candidate = model('Candidate', candidateSchema);
 
-module.exports = Candidate;
+export default Candidate;

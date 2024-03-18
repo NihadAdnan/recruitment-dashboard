@@ -1,30 +1,32 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const jobSchema = new mongoose.Schema({
-    title:{
-        type:String,
-        required:true
-    },
-    shortListed:{
-        type:Number,
-        required:true
-    },
-    inProcess:{
-        type:Number,
-        required:true
-    },
-    onHold:{
-        type:Number,
-        required:true
-    },
-    rejected:{
-        type:Number,
-        required:true
-    },
-},
-{ timestamps:true}
-)
+  title: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  requirements: {
+    type: [String],
+    required: true
+  },
+  posted_by: {
+    type: String,
+    required: true
+  },
+  date_posted: {
+    type: Date,
+    default: Date.now
+  }
+});
 
-const job = mongoose.model('Job',jobSchema)
+const Job = mongoose.model('Job', jobSchema);
 
-export default job
+module.exports = Job;

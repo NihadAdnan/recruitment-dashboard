@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 export default function Dashboard() {
+  
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="absolute w-1280 h-796 bg-white shadow-md transform -rotate-0.3">
@@ -256,10 +257,12 @@ export default function Dashboard() {
                 {/* Text */}
                 <div className="w-[241px] h-[44px]"><p className="font-barlow font-semibold text-24 leading-16 text-center text-black">Welcome back XTZ</p></div>
                 </div>
-                {/* Button */}
+                <NavLink to='/createJob'>
+                  {/* Button */}
                 <div className=" w-[166px] h-[36px] bg-teal-500 rounded-md">
                   <button className="w-[166px] h-[36px] text-white">+ Create New Job</button>
                 </div>
+                </NavLink>
             </div>
 
 

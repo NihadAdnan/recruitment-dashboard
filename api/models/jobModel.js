@@ -21,7 +21,6 @@ const jobSchema = new Schema({
   },
   posted_by: {
     type: String,
-    required: true
   },
   date_posted: {
     type: Date,

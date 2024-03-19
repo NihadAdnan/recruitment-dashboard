@@ -1,71 +1,9 @@
-// import { NavLink } from "react-router-dom";
-
-// export default function Dashboard() {
-//     return (
-//         <div className="absolute w-[166px] h-[633px]">
-//             <div className="flex flex-col gap-4">
-//         {/* ayyKori */}
-//         <div className="flex flex-row items-start">
-//           <img src="/src/assets/logo.png" alt="logo of ayyKori" className="w-[129px] h-[32px]" />
-//         </div>
-//         <div className="h-4" />
-  
-//         {/* Menu */}
-
-//           <p className="font-barlow font-bold text-xs leading-none text-black">Menu</p>
-//           <div className="flex flex-col space-x-4">
-//             <NavLink to='/'>
-//             <div className="w-[166px] h-[36px] bg-[#11998E] rounded-lg">Dashboard</div>
-//             </NavLink>
-            
-//             <div className="w-[80px] h-[24px]">
-//             <img src="/src/assets/Group 4.png" alt="" />
-//             <img src="/src/assets/Group 5.png" alt="" />
-          
-//             </div>
-//             </div>
-//         <div className="h-4" />
-  
-//         {/* recruitment */}
-//         <p className="font-barlow font-bold text-xs leading-none text-black">Recruitment</p>
-//           <div className="flex flex-col space-x-4">
-//             <div className="w-[80px] h-[24px]  space-y-2 space-x-4">
-//             <img src="/src/assets/Group 6.png" alt="" />
-//             <NavLink to='/application'>
-//             <img src="/src/assets/Application.png" alt="" />
-//             </NavLink>
-//             <img src="/src/assets/Group 8.png" alt="" />
-//             <img src="/src/assets/My Referrals.png" alt="" />
-          
-//             </div>
-//             </div>
-//         <div className="h-4" />
-  
-//         {/* organization */}
-//         <p className="font-barlow font-bold text-xs leading-none text-black pt-12">Organization</p>
-//           <div className="flex flex-col space-x-4">
-//             <div className="w-[80px] h-[24px]  space-y-2 space-x-4">
-//             <img src="/src/assets/Group 10.png" alt="" />
-//             <img src="/src/assets/Structure.png" alt="" />
-//             <img src="/src/assets/Report.png" alt="" />
-//             <img src="/src/assets/Settings.png" alt="" />
-//             <img src="/src/assets/logout.png" alt="" />
-          
-//             </div>
-//             </div>
-//       </div>
-
-//         </div>
-      
-//     );
-//   }
-  
 
 export default function Dashboard() {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="absolute w-1280 h-796 bg-white shadow-md transform -rotate-0.3">
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-12">
           {/* 1.menubar */}
           <div className="flex flex-col gap-8">
       {/* logo */}
@@ -155,9 +93,142 @@ export default function Dashboard() {
       </div>
     </div>
           {/* 2.good morning */}
-          <div>
-            Good morning Page
+          <div className="flex flex-col gap-4">
+      <div className="flex flex-row items-center gap-72">
+        {/* nav bar */}
+        <div>
+          <img src="/src/assets/Good Morning.png" alt="" className="w-[124px] h-[25px]"/>
+        </div>
+        <div>
+          <img src="/src/assets/Group 75.png" alt="" className="w-[284px] h-[36px]"/>
+        </div>
+      </div>
+      <div className="flex flex-row gap-12">
+        {/* stat */}
+        <div className="w-[224px] h-[110px] bg-[#FFFFFF] rounded-md">
+          <div className="flex flex-row gap-6">
+          <div className="flex flex-col gap-4">
+            {/* stats */}
+            <div className=" w-[96px] h-[15px] font-barlow font-medium text-xs text-center text-black">
+              Total Candidates
+            </div>
+            <div className="w-[29px] h-[28px] font-barlow font-bold text-xl text-center text-black">
+              361
+            </div>
+            <div className="flex flex-row gap-2 items-center">
+              <div>
+              <img src="/src/assets/Group 18.png" alt="" />
+              </div>
+              <div className="w-[32px] h-[16px] font-barlow font-medium text-xs  text-teal-500">
+      +26%Inc
+    </div>
+            </div>
+</div>
+<div className="relative">
+      {/* image */}
+      <div
+        className="w-[50px] h-[50px] bg-cover bg-center"
+        style={{ backgroundImage: `url('/src/assets/Group 17.png')` }}
+      >
+        {/* text */}
+        <div className="flex items-center justify-center mt-3">
+          <div className="w-[29px] h-[16px] font-barlow font-medium text-xs text-center text-teal-500 mt-3">
+            74%
           </div>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+
+
+        <div className="w-[224px] h-[110px] bg-[#FFFFFF] rounded-md">
+          <div className="flex flex-row gap-6">
+          <div className="flex flex-col gap-4">
+            {/* stats */}
+            <div className=" w-[96px] h-[15px] font-barlow font-medium text-xs text-center text-black">
+              Shortlisted Candidates
+            </div>
+            <div className="w-[29px] h-[28px] font-barlow font-bold text-xl text-center text-black">
+              201
+            </div>
+            <div className="flex flex-row gap-2 items-center">
+              <div>
+              <img src="/src/assets/Group 18.png" alt="" />
+              </div>
+              <div className="w-[32px] h-[16px] font-barlow font-medium text-xs  text-[#E7B860]">
+      +45%Inc
+    </div>
+            </div>
+</div>
+<div className="relative">
+      {/* image */}
+      <div
+        className="w-[50px] h-[50px] bg-cover bg-center"
+        style={{ backgroundImage: `url('/src/assets/Group 20.png')` }}
+      >
+        {/* text */}
+        <div className="flex items-center justify-center mt-3">
+          <div className="w-[29px] h-[16px] font-barlow font-medium text-xs text-center text-[#E7B860] mt-3">
+            74%
+          </div>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+
+
+
+
+        <div className="w-[224px] h-[110px] bg-[#FFFFFF] rounded-md">
+          <div className="flex flex-row gap-6">
+          <div className="flex flex-col gap-4">
+            {/* stats */}
+            <div className=" w-[96px] h-[15px] font-barlow font-medium text-xs text-center text-black">
+              Rejected Candidates
+            </div>
+            <div className="w-[29px] h-[28px] font-barlow font-bold text-xl text-center text-black">
+              160
+            </div>
+            <div className="flex flex-row gap-2 items-center">
+              <div>
+              <img src="/src/assets/Group 18.png" alt="" />
+              </div>
+              <div className="w-[32px] h-[16px] font-barlow font-medium text-xs  text-[#FF6A49]">
+      +04%Dec
+    </div>
+            </div>
+</div>
+<div className="relative">
+      {/* image */}
+      <div
+        className="w-[50px] h-[50px] bg-cover bg-center"
+        style={{ backgroundImage: `url('/src/assets/Group 21.png')` }}
+      >
+        {/* text */}
+        <div className="flex items-center justify-center mt-3">
+          <div className="w-[29px] h-[16px] font-barlow font-medium text-xs text-center text-[#FF6A49] mt-3">
+            74%
+          </div>
+        </div>
+      </div>
+    </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div>
+        {/* lines */}
+        lines
+      </div>
+      <div>
+        {/* graph */}
+        graph
+      </div>
+    </div>
           {/* 3.welcome */}
           <div>
             Welcome Page

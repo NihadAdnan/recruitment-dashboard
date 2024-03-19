@@ -1,4 +1,8 @@
 
+import Jobs from "../components/Jobs";
+import { NavLink } from 'react-router-dom';
+
+
 export default function Dashboard() {
   return (
     <div className="flex justify-center items-center h-screen">
@@ -19,10 +23,13 @@ export default function Dashboard() {
           <ul>
             <li>
               <button>
+                <NavLink to='/'>
                 <div className="flex flex-row gap-3 absolute w-[166px] h-[36px] bg-teal-500 rounded-lg items-center">
                   <img src="/src/assets/ep_menu.png" alt="" />
                   <p className="font-bold">Dashboard</p>
                 </div>
+                </NavLink>
+                
               </button>
             </li>
             <li className="mt-10">
@@ -51,10 +58,12 @@ export default function Dashboard() {
             </li>
             <li className="mt-4">
             <button className="w-20 h-61 relative">
+      <NavLink to='/application'>
       <div className="flex flex-row gap-3 absolute w-full h-full rounded-lg items-center">
         <img src="/src/assets/carbon_application.png" alt="" />
         <p className="font-bold text-sm">Application</p>
       </div>
+      </NavLink>
     </button>
             </li>
             <li className="mt-4">
@@ -240,8 +249,35 @@ export default function Dashboard() {
       </div>
     </div>
           {/* 3.welcome */}
-          <div>
-            Welcome Page
+          <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12">
+                {/* create new jobs */}
+                <div>
+                {/* Text */}
+                <div className="w-[241px] h-[44px]"><p className="font-barlow font-semibold text-24 leading-16 text-center text-black">Welcome back XTZ</p></div>
+                </div>
+                {/* Button */}
+                <div className=" w-[166px] h-[36px] bg-teal-500 rounded-md">
+                  <button className="w-[166px] h-[36px] text-white">+ Create New Job</button>
+                </div>
+            </div>
+
+
+            <div className="mt-5">
+  {/* Recently added jobs */}
+  <div className="h-[16px] font-barlow font-medium text-xs leading-4 text-black">Recent Added Jobs</div>
+
+<Jobs/>
+<Jobs/>
+<Jobs/>
+<Jobs/>
+<Jobs/>
+<Jobs/>
+<Jobs/>
+
+</div>
+
+
           </div>
         </div>
       </div>

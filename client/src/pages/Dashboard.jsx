@@ -220,13 +220,23 @@ export default function Dashboard() {
 
 
       </div>
-      <div>
+      <div className="flex flex-row gap-12">
         {/* lines */}
-        lines
+        <div>
+            <img src="/src/assets/Group 73.png" alt="" className="w-[426px] h-[266px]"/>
+        </div>
+        <div>
+            <img src="/src/assets/Group 74.png" alt="" className="w-[184px] h-[258px]"/>
+        </div>
       </div>
-      <div>
+      <div className="flex flex-row gap-12 mt-6">
         {/* graph */}
-        graph
+        <div>
+          <img src="/src/assets/Group 70.png" alt="" className="w-[426px] h-[181px]"/>
+        </div>
+        <div>
+          <img src="/src/assets/Group 71.png" alt="" className="w-[157px] h-[190.57px]"/>
+        </div>
       </div>
     </div>
           {/* 3.welcome */}
